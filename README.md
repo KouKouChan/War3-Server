@@ -18,7 +18,7 @@
 |      |      |      |
 |      |      |      |
 
-### 4.liscense
+### 4.license
 
 ```
 GPL
