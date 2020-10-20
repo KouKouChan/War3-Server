@@ -1,0 +1,32 @@
+{
+  "name": "war3-server",
+  "version": "0.0.1",
+  "description": "A war3 bnet server",
+  "main": "src/server.ts",
+  "dependencies": {
+    "@types/node": "^14.11.11",
+    "dgram": "^1.0.1",
+    "net": "^1.0.2"
+  },
+  "devDependencies": {
+    "dgram": "^1.0.1",
+    "net": "^1.0.2"
+  },
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "npm run tslint && npm run build-ts",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KouKouChan/War3-Server.git"
+  },
+  "author": "KouKouChan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KouKouChan/War3-Server/issues"
+  },
+  "homepage": "https://github.com/KouKouChan/War3-Server#readme"
+}

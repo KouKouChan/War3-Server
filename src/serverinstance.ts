@@ -9,8 +9,12 @@ export interface ServerOption{
     ServerUDPPort: number
 }
 
+/**
+ * 服务器主函数类
+ * @class ServerInstance
+ */
 export class ServerInstance{
-    private server: net.server
+    private server: net.Server
     private udpserver: dgram.Socket
     private serverName: string
     private serverPort: number
@@ -23,8 +27,6 @@ export class ServerInstance{
         this.serverUDPPort = options.ServerUDPPort
         
         //设置服务器TCP/UDP
-        this.server
-            .on('')
 
     }
 
@@ -32,7 +34,7 @@ export class ServerInstance{
      * prepare to listen port
      * @returns void 
      */
-    public listen(){
+    public listen(): void {
         this.server.listen(this.serverPort, this.serverName)
         this.udpserver.bind(this.serverUDPPort, this.serverName)
     }
