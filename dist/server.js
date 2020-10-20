@@ -9,24 +9,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+//将源目录的模块加进搜索目录
 require("app-module-path/register");
 const serverinstance_1 = require("serverinstance");
 const version = "0.0.1";
 const port_tcp = 6112;
 const port_track = 6114;
-const server_name = "War3-Server";
+const server_host = "192.168.3.30";
 function startserver() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("Warcraft III Server " + version + " , author:KouKouChan");
-        console.log("This server supports classical warcraft 3 , thx to bnetd for their source code.");
-        console.log("This is a free open source software.");
-        console.log("Please follow the GPL v3 permit to use it.");
         const mainserver = new serverinstance_1.ServerInstance({
-            ServerName: server_name,
+            ServerName: server_host,
             ServerPort: port_tcp,
-            ServerUDPPort: port_track,
+            ServerUDPPort: port_tcp,
         });
-        //mainserver.stop()
+        mainserver.listen();
     });
 }
 startserver();
