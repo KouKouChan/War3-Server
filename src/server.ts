@@ -14,7 +14,7 @@ async function startserver(){
     console.log("This server supports classical warcraft 3.")
     console.log("Thx to bnetd for source code ,and L-leite for cso2-master-server.")
     console.log("This is a free open source software.")
-    console.log("Please follow the GPL v3 permit to use it.\n")
+    console.log("Please follow the GPL v3 permit to use it !\n")
 
     const mainserver:ServerInstance = new ServerInstance({
         ServerName:server_host,
